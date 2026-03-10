@@ -1,0 +1,410 @@
+{
+  "id": "69a5c60b44e52e51010924c2",
+  "title": "Introduction to System Design",
+  "description": "This is an introductory course for beginners who want to learn system design. The course has been divided into two sessions, with each session focusing on specific aspects of system design.",
+  "learningObjectives": [
+    "Understand basics of databases and caching for performance",
+    "Learn about scaling, server states, and architecture models"
+  ],
+  "finalProjectDetails": {
+    "overview": "For the final project, apply the knowledge gained throughout the course to the project you are currently working on. Explain why the architecture was chosen, evaluate its pros and cons, and describe how it would scale. Your approach should demonstrate an understanding of databases, caching, scalability, appropriate server state management, and architectural models. You may also explore additional relevant topics that were not covered in class.",
+    "requirements": [
+      ""
+    ],
+    "submissionInstructions": "No submission needed.",
+    "planningResources": [
+      "System Design Primer",
+      "High Scalability Blog",
+      "Various design patterns and principles books"
+    ]
+  },
+  "createdBy": {
+    "name": "Ming K",
+    "githubUsername": "myang1010"
+  },
+  "contributors": [
+    {
+      "name": "Katie Brey",
+      "githubUsername": "kbrey"
+    },
+    {
+      "name": "Mo S Rezaie",
+      "githubUsername": "msrezaie"
+    },
+    {
+      "name": "Tom Rau"
+    }
+  ],
+  "status": "pending",
+  "originalGithubUrl": null,
+  "remoteGithubUrl": "https://github.com/msrezaie/introduction-to-system-design",
+  "createdAt": "2026-03-02T17:16:59.776Z",
+  "updatedAt": "2026-03-10T20:31:36.802Z",
+  "lessonCount": 2,
+  "lessonMetadata": [
+    {
+      "id": "69a5c60b44e52e51010924c5",
+      "lessonNumber": 1,
+      "title": "Databases and Caching",
+      "status": "complete",
+      "assignment": {
+        "title": "Implementing Caching Strategies and Database Indexes",
+        "objective": "Learn to implement basic caching strategies and create indexes to optimize database performance.",
+        "expectedCapabilities": [
+          "Understand and implement basic caching",
+          "Create indexes in a database"
+        ],
+        "submissionInstructions": "Submit screenshots showing your Redis setup and results of indexed query performance testing.",
+        "tasks": [
+          {
+            "taskNumber": 1,
+            "title": "Examine Cache Effectiveness",
+            "description": "Access cached data and observe the performance difference.",
+            "codeExample": "GET mykey",
+            "_id": "69a5c82644e52e5101092516"
+          },
+          {
+            "taskNumber": 2,
+            "title": "Query Indexed Database",
+            "description": "Run a query on an indexed and non-indexed database table. Compare the performance.",
+            "codeExample": "SELECT * FROM sample_table WHERE column_name = 'value';",
+            "_id": "69a5c82644e52e5101092517"
+          }
+        ],
+        "instructions": [
+          {
+            "partNumber": 1,
+            "steps": [
+              {
+                "taskNumber": 1,
+                "title": "Install Redis",
+                "description": "Install Redis server to use as a caching layer.",
+                "codeExample": "N/A",
+                "_id": "69a5c82644e52e5101092512"
+              },
+              {
+                "taskNumber": 2,
+                "title": "Setup a Basic Cache with Redis",
+                "description": "Implement a basic cache for storing key-value pairs using Redis.",
+                "codeExample": "SET mykey 'value'",
+                "_id": "69a5c82644e52e5101092513"
+              }
+            ],
+            "_id": "69a5c82644e52e5101092511"
+          },
+          {
+            "partNumber": 2,
+            "steps": [
+              {
+                "taskNumber": 1,
+                "title": "Create Index on Database",
+                "description": "Create an index on a sample dataset to improve query performance.",
+                "codeExample": "CREATE INDEX idx_name ON sample_table (column_name);",
+                "_id": "69a5c82644e52e5101092515"
+              }
+            ],
+            "_id": "69a5c82644e52e5101092514"
+          }
+        ],
+        "checklist": [
+          "Redis installed",
+          "Key-value pair set in Redis",
+          "Index created on database",
+          "Query performance compared"
+        ],
+        "checkForUnderstanding": [
+          {
+            "question": "How does caching help in system design?",
+            "options": [
+              "Increases storage capacity",
+              "Increases data retrieval speed",
+              "Increases data accuracy"
+            ],
+            "answer": "Increases data retrieval speed",
+            "_id": "69a5c82644e52e510109250f"
+          },
+          {
+            "question": "What is the trade-off of using indexing in databases?",
+            "options": [
+              "Faster writes, slower reads",
+              "Faster reads, slower writes",
+              "Slower storage, faster reads"
+            ],
+            "answer": "Faster reads, slower writes",
+            "_id": "69a5c82644e52e5101092510"
+          }
+        ]
+      },
+      "subsections": [
+        {
+          "subsectionOrder": 1,
+          "title": "Introduction to Databases",
+          "content": "Databases are structured collections of data, used to store and manipulate information. They are essential for designing systems that handle large volumes of data efficiently. Databases allow for data retrieval, modification, and deletion using structured query language (SQL). They support ACID properties: Atomicity, Consistency, Isolation, Durability, ensuring reliable transactions.",
+          "videoUrl": "",
+          "codeExamples": [],
+          "externalLinks": [],
+          "quizzes": [
+            {
+              "question": "What does ACID stand for in databases?",
+              "options": [
+                "Atomicity, Consistency, Isolation, Durability",
+                "Availability, Consistency, Isolation, Durability",
+                "Atomicity, Consistency, Interoperability, Durability"
+              ],
+              "answer": "Atomicity, Consistency, Isolation, Durability",
+              "_id": "69b0544144e52e51010931b3"
+            }
+          ],
+          "_id": "69a5cce444e52e51010926bc"
+        },
+        {
+          "subsectionOrder": 2,
+          "title": "Types of Databases",
+          "content": "Databases can be broadly categorized into relational databases (e.g., PostgreSQL, MySQL) and non-relational databases (e.g., MongoDB, Cassandra). Relational databases use tables to store data and SQL for queries. Non-relational databases, also known as NoSQL databases, store data in various formats like documents, key-value pairs, and graphs.",
+          "videoUrl": "",
+          "codeExamples": [],
+          "externalLinks": [],
+          "quizzes": [
+            {
+              "question": "Which of the following is a NoSQL database?",
+              "options": [
+                "MySQL",
+                "MongoDB",
+                "PostgreSQL"
+              ],
+              "answer": "MongoDB",
+              "_id": "69b0544144e52e51010931b5"
+            }
+          ],
+          "_id": "69a5cce444e52e51010926be"
+        },
+        {
+          "subsectionOrder": 3,
+          "title": "Introduction to Caching",
+          "content": "Caching is a technique used to store copies of frequently accessed data in a high-speed memory layer so that future requests can be served faster. It helps improve performance and scalability. Common caching strategies include in-memory caching (e.g., Redis, Memcached) and browser caching.",
+          "videoUrl": "",
+          "codeExamples": [],
+          "externalLinks": [],
+          "quizzes": [
+            {
+              "question": "What is the primary purpose of caching?",
+              "options": [
+                "To store data permanently",
+                "To speed up data retrieval",
+                "To organize data"
+              ],
+              "answer": "To speed up data retrieval",
+              "_id": "69b0544144e52e51010931b7"
+            }
+          ],
+          "_id": "69a5cce444e52e51010926c0"
+        },
+        {
+          "subsectionOrder": 4,
+          "title": "Database Indexing for Performance",
+          "content": "Indexing is a technique used in databases to speed up data retrieval operations. It creates pointers to data in tables, significantly reducing the time taken for query responses. While indexing speeds up reads, it can slow down writes as indexes need updating.",
+          "videoUrl": "",
+          "codeExamples": [
+            "CREATE INDEX idx_name ON table_name (column_name);"
+          ],
+          "externalLinks": [],
+          "quizzes": [
+            {
+              "question": "What is the main advantage of indexing in databases?",
+              "options": [
+                "Faster data updates",
+                "Faster data retrieval",
+                "Increased storage efficiency"
+              ],
+              "answer": "Faster data retrieval",
+              "_id": "69b0544144e52e51010931b9"
+            }
+          ],
+          "_id": "69a5cce444e52e51010926c2"
+        }
+      ]
+    },
+    {
+      "id": "69a5c60b44e52e51010924c6",
+      "lessonNumber": 2,
+      "title": "Scaling and System Architectures",
+      "status": "complete",
+      "assignment": {
+        "title": "Design a Scalable, Load-Balanced System",
+        "objective": "Apply your understanding of scalability and system architectures to design an efficient scalable system with load balancing.",
+        "expectedCapabilities": [
+          "Design scalable architectures",
+          "Implement load balancing strategies",
+          "Explain microservices benefits"
+        ],
+        "submissionInstructions": "Optional.",
+        "tasks": [
+          {
+            "taskNumber": 1,
+            "title": "Create a System Architecture Diagram",
+            "description": "Include horizontal scaling and load balancing elements.",
+            "codeExample": "",
+            "_id": "69a5cc3844e52e5101092671"
+          },
+          {
+            "taskNumber": 2,
+            "title": "Write a Configuration for Load Balancer",
+            "description": "Configure an example load balancer setup with annotations.",
+            "codeExample": "",
+            "_id": "69a5cc3844e52e5101092672"
+          }
+        ],
+        "instructions": [
+          {
+            "partNumber": 1,
+            "steps": [
+              {
+                "taskNumber": 1,
+                "title": "Draw the Architecture Diagram",
+                "description": "Draw a diagram illustrating the components and data flow for a scalable system using load balancers and microservices.",
+                "codeExample": "",
+                "_id": "69a5cc3844e52e510109266f"
+              },
+              {
+                "taskNumber": 2,
+                "title": "Configure a Sample Load Balancer",
+                "description": "Set up a simple NGINX or HAProxy configuration to demonstrate load distribution.",
+                "codeExample": "",
+                "_id": "69a5cc3844e52e5101092670"
+              }
+            ],
+            "_id": "69a5cc3844e52e510109266e"
+          }
+        ],
+        "checklist": [
+          "Load Balancer Configured",
+          "Horizontal Scaling Illustrated",
+          "Microservices Components Defined"
+        ],
+        "checkForUnderstanding": [
+          {
+            "question": "What is a key benefit of microservices architecture?",
+            "options": [
+              "Single point of failure",
+              "Redundant code",
+              "Modularity and isolation"
+            ],
+            "answer": "Modularity and isolation",
+            "_id": "69a5cc3844e52e510109266c"
+          },
+          {
+            "question": "How does horizontal scaling improve system performance?",
+            "options": [
+              "By adding resources to one server",
+              "By adding more servers",
+              "By limiting server capacity"
+            ],
+            "answer": "By adding more servers",
+            "_id": "69a5cc3844e52e510109266d"
+          }
+        ]
+      },
+      "subsections": [
+        {
+          "subsectionOrder": 1,
+          "title": "Understanding System Scalability",
+          "content": "Scalability is the capability of a system to handle a growing amount of work or its potential to accommodate growth. There are two main types of scalability: vertical and horizontal scaling. \n\n- **Vertical Scaling** involves adding resources to a single node (e.g., upgrading CPU, RAM). This approach is often easier to implement but may face physical limits.\n\n- **Horizontal Scaling** involves adding more nodes to the system (e.g., adding more servers to handle load). It is more complex but allows for handling larger loads and redundancy.",
+          "videoUrl": "",
+          "codeExamples": [
+            "n/a"
+          ],
+          "externalLinks": [],
+          "quizzes": [
+            {
+              "question": "What is vertical scaling?",
+              "options": [
+                "Adding more nodes",
+                "Upgrading CPU and RAM",
+                "Reducing hardware"
+              ],
+              "answer": "Upgrading CPU and RAM",
+              "_id": "69b0544144e52e51010931d8"
+            },
+            {
+              "question": "What is the advantage of horizontal scaling?",
+              "options": [
+                "Less complexity",
+                "No upgrade needed",
+                "More redundancy"
+              ],
+              "answer": "More redundancy",
+              "_id": "69b0544144e52e51010931d9"
+            }
+          ],
+          "_id": "69a5cc3844e52e5101092663"
+        },
+        {
+          "subsectionOrder": 2,
+          "title": "Introduction to Load Balancers",
+          "content": "Load balancers distribute incoming network traffic across several servers to ensure no single server becomes overwhelmed. \n\n- **Types of Load Balancers**: \n  - *Hardware Load Balancers*: Physical devices appliance setups.\n  - *Software Load Balancers*: Applications such as HAProxy, NGINX.\n\n- **Benefits**:\n  - Increases reliability and availability by distributing traffic.\n  - Supports horizontal scaling by evenly distributing loads.",
+          "videoUrl": "",
+          "codeExamples": [
+            "n/a"
+          ],
+          "externalLinks": [],
+          "quizzes": [
+            {
+              "question": "What is the purpose of a load balancer?",
+              "options": [
+                "Prevent system updates",
+                "Distribute traffic evenly",
+                "Limit access"
+              ],
+              "answer": "Distribute traffic evenly",
+              "_id": "69b0544144e52e51010931db"
+            },
+            {
+              "question": "Which of these is a software load balancer?",
+              "options": [
+                "F5 Network",
+                "HAProxy",
+                "Cisco"
+              ],
+              "answer": "HAProxy",
+              "_id": "69b0544144e52e51010931dc"
+            }
+          ],
+          "_id": "69a5cc3844e52e5101092666"
+        },
+        {
+          "subsectionOrder": 3,
+          "title": "Microservices Architecture",
+          "content": "Microservices architecture is a design pattern in which a single application is composed of many loosely coupled and independently deployable services. \n\n- **Characteristics**:\n  - Encapsulation of business logic within services.\n  - Each microservice is focused on a single function or small area.\n\n- **Pros and Cons**:\n  - Facilitates easy deployment and scaling.\n  - Can introduce challenges with data consistency and management across services.\n\n- **Examples**:\n  - Building a retail application with separate services for product catalog, shopping cart, inventory, etc.",
+          "videoUrl": "",
+          "codeExamples": [
+            "n/a"
+          ],
+          "externalLinks": [],
+          "quizzes": [
+            {
+              "question": "What is the main advantage of microservices?",
+              "options": [
+                "Coupling services tightly",
+                "Independent deployment",
+                "Single function focus"
+              ],
+              "answer": "Independent deployment",
+              "_id": "69b0544144e52e51010931de"
+            },
+            {
+              "question": "Which architecture model allows each service to focus on a single area?",
+              "options": [
+                "Monolithic",
+                "Microservices",
+                "Service-oriented"
+              ],
+              "answer": "Microservices",
+              "_id": "69b0544144e52e51010931df"
+            }
+          ],
+          "_id": "69a5cc3844e52e5101092669"
+        }
+      ]
+    }
+  ]
+}
