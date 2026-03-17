@@ -13,5 +13,5 @@ This course provides comprehensive learning materials for Introduction to System
 
 ## Course Structure
 
-### Lesson 1: Databases and Caching
-### Lesson 2: Scaling and System Architectures
+### Lesson 1: Databases and Caching - 3/27/2026
+### Lesson 2: Scaling and System Architectures - TBD
