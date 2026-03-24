@@ -1,6 +1,7 @@
 ### Class Learning Objectives
 
-By the end of this course, students will be able to: - Understand basics of databases and caching for performance.
+By the end of this course, students will be able to: 
+ - Understand basics of databases and caching for performance.
  - Learn about scaling, server states, and architecture models.
 
 | Week | Topic | Learning Objective |

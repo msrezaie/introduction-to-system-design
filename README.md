@@ -15,3 +15,7 @@ This course provides comprehensive learning materials for Introduction to System
 
 ### Lesson 1: Databases and Caching - 3/27/2026
 ### Lesson 2: Scaling and System Architectures - TBD
+
+## System Design Diagram
+https://sonalibedge.github.io/System-Design-Guides/system-design-architecture.html
+(credit: Sonali Bedge)
